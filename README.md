@@ -1,7 +1,7 @@
 # Personal Portfolio ⚡️ 
 > A clean, beautiful, responsive portfolio template for Software Developers!
 
-> https://manuelmusy.github.io
+> https://theperk08.github.io
 
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
@@ -9,7 +9,7 @@
 ### Website Preview
 <p align="center"> 
   <kbd>
-    <a href="https://manuelmusy.github.io" target="_blank"><img src="examples/preview.jpg">
+    <a href="https://theperk08.github.io" target="_blank"><img src="examples/preview.jpg">
   </a>
   </kbd>
 </p>
