@@ -413,6 +413,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.column_exp {
+  flex: 50%;  
+}
+
 #experience .card-action {
   background-color: rgba(0, 0, 0, 0.02);
   border: none;
