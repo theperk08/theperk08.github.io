@@ -413,6 +413,11 @@ h3 {
   text-transform: uppercase;
 }
 
+.row_exp {
+  display: flex;
+ 
+}
+
 .column_exp {
   flex: 50%;  
 }
