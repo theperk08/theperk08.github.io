@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<!-- En-tête de la page -->
+	<link rel="stylesheet" href="monstyle.css">  <!-- pour ajouter la feuille de styles-->
+        <meta charset="utf-8" />
+        <title>Cours Particuliers MM</title>
+    </head>
+	<h1>
+	
+	<table width="100%">
+	<tr>
+		<td width="10%">
+			<a href="index.html" class="button">MM</a>
+		</td>
+		<td width="15%">
+		</td>
+		<td class="ombre" width="45%">
+			Fiches d'Exercices
+		</td>
+		<td width="30%">
+		</td>
+		
+	</tr>
+	</table>
+	
+	</h1>
+    <body>
+	<!--<nav class="menu">-->
+	
+    <ul id="menu_classes">
+			<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Quatrieme"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Troisieme"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Seconde"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Premiere"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Terminale"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Terminale_Experte"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Autres"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Devoirs Seconde"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Devoirs Premiere"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Devoirs Terminale"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Devoirs Terminale_ES"/></li>
+		<li ><input type="button" class="passif"  onclick="newSrc_chap(event)" value="Devoirs Autres"/></li>
+
+	
+	</ul> 
+	<iframe id="chapitres" src="" style="width:1400px;height:1000px;" ></iframe>
+	<!--</nav>-->
+	<!-- lien="C:/Users/thepe/Documents/math/1e/derivation_lectures_graphiques.pdf"-->
+	
+	
+	
+	<!--<iframe src="fichiers/derivation_lectures_graphiques.pdf" width="1000" height="800" ></iframe>-->
+	
+	
+	
+    </body>
+	
+	<script>
+	
+	function mafonction1(clicked_id){
+	document.getElementById(clicked_id).style.color="red";
+	}
+	function newSrc_chap(event) {
+<!--var e = document.getElementById("MySelectMenu");-->
+  <!--var newSrc = e.options[e.selectedIndex].value;-->
+  var selectElement=event.target;
+  var elt=selectElement.value;
+  
+  var liste1=document.getElementById("menu_classes");
+  links=liste1.getElementsByTagName("input");
+  <!--var numero=selectElement.selectedIndex;-->
+  <!--alert (numero);-->
+  for (var i=0 ; i<links.length ; i ++){
+  <!--links.item(i).style="background-color:white";-->
+  links.item(i).className="passif";
+  
+  <!--selectElement.style="background-color: #5dade2 ";-->
+  }
+  selectElement.className="actif";
+  
+  
+  
+  
+ 
+  switch (elt){
+  case "Quatrieme":
+  newSrc="Page_4e";
+  
+  break;
+  case "Troisieme":
+  newSrc="Page_3e";
+  
+  break;
+  case "Seconde":
+  newSrc="Page_2e";
+   break;
+  case "Premiere":
+  newSrc="Page_1e";
+   break;
+    case "Terminale":
+  newSrc="Page_Terminale";
+   break;
+    case "Terminale_Experte":
+  newSrc="Page_Terminale_experte";
+   break;
+   case "Autres":
+  newSrc="Page_autres";
+   break;
+   case "Devoirs Seconde":
+  newSrc="Page_devoirs_2e";
+   break;
+  case "Devoirs Premiere":
+  newSrc="Page_devoirs_1e";
+   break;
+    case "Devoirs Terminale":
+  newSrc="Page_devoirs_Terminale";
+   break;
+    case "Devoirs Terminale_ES":
+  newSrc="Page_devoirs_Terminale_ES";
+   break;
+   case "Devoirs Autres":
+  newSrc="Page_devoirs_autres";
+   break;
+  }
+  
+  document.getElementById("chapitres").src=newSrc+".html";
+  
+}
+	function newSrc(event) {
+<!--var e = document.getElementById("MySelectMenu");-->
+  <!--var newSrc = e.options[e.selectedIndex].value;-->
+  var selectElement=event.target;
+  var newSrc=selectElement.value;
+  document.getElementById("chapitres").src=newSrc;
+}
+	</script>
+	
+</html>
